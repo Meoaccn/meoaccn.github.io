@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<!--
+	Directive by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>毕业证书 - 中国喵学院</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/browser.min.js"></script>
+		<script src="../assets/js/breakpoints.min.js"></script>
+		<script src="../assets/js/util.js"></script>
+		<script src="../assets/js/main.js"></script>
+		<script src="assets/pdf-lib.min.js"></script>
+		<script src="assets/download.min.js"></script>
+		<script src="assets/party.min.js"></script>
+		<script src="assets/fontkit.umd.js"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+				<h1>下载您的毕业证书！</h1>
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<header class="major container medium">
+					<article>您有两种方法可以下载毕业证书：<br/>1、使用本网站的自动生成功能（由于国内网络原因，此功能可能反应较慢！）<br/>（因为需要加载完整的字体包，而中文的字体包体积 > 英文的字体包，所以制作中文证书的时间会比英文时间长。同时没有找到合适license的中文Gothic字体，所以中文专业名为 <a href="https://fonts.google.com/noto/specimen/Noto+Serif+SC">Noto Serif SC</a> 宋体，英文专业名使用 <a href="https://github.com/ctrlcctrlv/chomsky">Chomsky</a> 字体<br/><i>这些字体拥有<a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;id=OFL"></a>开放字体许可证</a>授权</i>）<br><a href="#1" class="button">点此自动生成</a><br>2、下载证书模板后自己填写（请使用电脑下载证书模板，填写保存后打印并输出为PDF即可获得属于自己的毕业证书！）<br/><a href=./assets/template_diploma.pdf" class="button">点此下载证书模板</a></article>
+					<script src="./certificate.js"></script>
+					<form>
+						<p id="1"><b>请在下方输入您的姓名和专业以下载毕业证书！</b><br/><b>说明：</b>请填写完信息后点击下载，然后稍等一会儿即可下载您的毕业证书！</p>
+						<table class="plain">
+						  <colgroup>
+							<col style="width: 150px;">
+							<col>
+						  </colgroup>
+						  <tbody>
+							<tr>
+							  <th><label for="fname" data-required="1">姓：</label></th>
+							  <td><input type="text" id="fname" name="fname" maxlength="20" size="10" data-required="1" spellcheck="false" required="required" aria-busy="" /></td>
+							</tr>
+							<tr>
+							  <th><label for="lname" data-required="1" spellcheck="false">名：</label></th>
+							  <td><input type="text" id="lname" name="lname" maxlength="20" size="10" data-required="1" spellcheck="false" required="required" /></td>
+							</tr>
+							<tr>
+							  <th><label for="checkbox" data-required="1" spellcheck="false">专业：</label></th>
+							  <td><input type="text" id="major" name="major" size="10" data-required="1" spellcheck="false" required="required" list="majors">
+								<datalist id="majors">
+								  <select>
+									<option>用猪肉养猪的研究</option>
+									<option>西瓜培育</option>
+									<option>专业炸鸡烹饪</option>
+									<option>野鸡产后护理</option>
+									<option>你可以随便输入你想要的专业</option>
+								  </select>
+								</datalist>
+							  </td>
+							</tr>
+						  </tbody>
+						</table>
+						<br>
+					  </form>
+					  <div class="action"><button class="button" onclick="fillForm(document.getElementById('fname').value, document.getElementById('lname').value, document.getElementById('major').value); party.confetti(this);">下载</button></div>
+				</header>
+			</div>
+	</body>
+</html>
