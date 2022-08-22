@@ -2,7 +2,7 @@ const { PDFDocument, StandardFonts } = PDFLib;
 const myDate = new Date();
 async function fillForm(fname, lname, major) {
   // Fetch the PDF with form fields
-  const formUrl = "https://cdn.jsdelivr.net/gh/meoaccn/meoaccn.github.io/certificate/assets/template_diploma.pdf"
+  const formUrl = "./assets/template_diploma.pdf"
   const englishUnicode = /^[0-9a-zA-Z\s]+$/;
   console.log(`Is user input in pure English: ${englishUnicode.test(major)}`);
   const formPdfBytes = await fetch(formUrl).then((res) => res.arrayBuffer());
